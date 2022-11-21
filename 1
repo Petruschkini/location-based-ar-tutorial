@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Julians Cool Location-based AR.js demo</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  </head>
+
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene
+      vr-mode-ui="enabled: false"
+      embedded
+      arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;"
+    >
+      <!Julian>
+      
+      
+           <!-----Kitchen----->
+      
+      <a-sphere
+        radius="0.5"
+        rotation="0 180 0"
+        color="blue"
+        gps-entity-place="latitude: 48.98368625820105; longitude: 12.056465585574408;"
+      ></a-sphere>
+      
+      <a-text
+        value="Hi You"
+        look-at="[gps-camera]"
+        scale="1 1 1"
+         gps-entity-place="latitude: 48.98368625820105; longitude: 12.056465585574408;"
+      ></a-text>
+
+
+      
+      
+      <!-----Lecture Room----->
+
+      <a-sphere
+        radius="0.5"
+        color="#ebd334"
+        gps-entity-place="latitude: 48.19477101764278; longitude: 11.611623114764415;"
+      ></a-sphere>
+      
+      
+      
+      <a-sphere
+        radius="1.0"
+        color="blue"
+        gps-entity-place="latitude: 48.194636467876734; longitude: 11.611508131027223;"
+      ></a-sphere>
+      
+      
+      
+      <a-sphere
+        radius="1.0"
+        color="red"
+        gps-entity-place="latitude: 48.194733058706646; longitude: 11.61161066843126;"
+      ></a-sphere>
+      
+      
+      <!-----Parking Lot----->
+      
+      <a-sphere
+        radius="1.0"
+        color="red"
+        gps-entity-place="latitude: 48.194623992837485; longitude: 11.612034457434643;"
+      ></a-sphere>
+      
+      <a-text
+        value="Hi You"
+        look-at="[gps-camera]"
+        scale="20 20 20"
+        gps-entity-place="latitude: 48.194623992837485; longitude: 11.612034457434643;"
+      ></a-text>
+
+      
+      
+      <!----->
+
+      
+    
+      
+      <a-text
+        value="Hi You"
+        look-at="[gps-camera]"
+        scale="20 20 20"
+        gps-entity-place="latitude: 48.194670660369844; longitude: 11.611718058518328;"
+      ></a-text>
+      
+      
+      <a-text
+        value="Hi You"
+        look-at="[gps-camera]"
+        scale="20 20 20"
+        gps-entity-place="latitude: 48.194733058706646; longitude: 11.61161066843126;"
+      ></a-text>
+
+    
+     
+      <!Enter your name here>
+
+      <!Add objects above here!>
+      <a-camera gps-camera="maxDistance: 100;" rotation-reader> </a-camera>
+    </a-scene>
+  </body>
+</html>
